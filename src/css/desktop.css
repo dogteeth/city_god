@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Serif TC", serif;
+}
+
+h2 {
+  letter-spacing: 0.05em;
+}
+/* 文字前後對齊 */
+p {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+/* 連結文字不斷行 */
+.linkText {
+  white-space: nowrap;
+}
+
+/* 連結不變色 */
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: black;
+}
+
+/* Header Main Banner */
+.sec01 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../src/img/city_god_readingGirls.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed;
+}
+.mainLogo {
+  width: 40vw;
+  max-width: 600px;
+  min-width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  filter: drop-shadow(0.2rem 0.5rem 0.5rem rgb(0, 0, 0));
+}
+
+.sec02 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../src/img/city_god_bk.jpg);
+  background-size: cover;
+  position: relative;
+  z-index: 9;
+  filter: drop-shadow(-0.2rem 0.5rem 1rem black);
+}
+.whoIsCityGodText {
+  position: absolute;
+  height: 120vh;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  filter: drop-shadow(0.2rem 0.5rem 0.5rem rgb(0, 0, 0));
+}
+.sec03 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../src/img/city_god_bk.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  /* background-attachment: fixed; */
+  z-index: 99;
+  filter: drop-shadow(-0.2rem 0.5rem 1rem black);
+}
+
+.shortGuy {
+  width: 20vw;
+  position: absolute;
+  right: 0;
+  bottom: 1%;
+}
+.tallGuy {
+  width: 20vw;
+
+  position: absolute;
+  left: 0;
+  bottom: 1%;
+}
+
+/* 全台最古老的城隍廟 */
+.sec04 {
+  width: 100%;
+  background-image: url(../../src/img/city_god_twoColor_bk_2.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  background-attachment: fixed;
+}
+/* 主視覺 */
+.theFlyingTigerHeader {
+  display: flex;
+  gap: 1%;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.theFlyingTigerHeader img {
+  width: 100%;
+}
+.middlePanel {
+  flex: 0 0 10%;
+}
+.theOldestTempleText {
+  max-height: 90vh;
+  object-fit: contain;
+}
+/* top 10 清單 */
+.theFlyingTigerBody {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5rem;
+  row-gap: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+/* 各廟資料 */
+.topListSet {
+  display: flex;
+  flex-direction: column;
+  border-top: black solid 0.5rem;
+  border-radius: 1rem;
+}
+.topListSet img {
+  width: 100%;
+  border-radius: 0.5rem;
+  filter: grayscale(0.8);
+}
+
+.topListSet img:hover {
+  filter: grayscale(0);
+}
+
+.title {
+  padding-top: 1rem;
+}
+
+.description {
+  padding-top: 0.5rem;
+}
+
+.info_source {
+  padding-top: 0.5rem;
+}
+
+/* 爾來了 */
+.divider_YouCame {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../src/img/text_youCame.png),
+    url(../../src/img/city_god_twoColor_bk_2.jpg);
+  background-size: 70vw, cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.divider_YouCame h2 {
+  color: white;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  transform: translate(0%, 0%);
+  width: 40vw;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+/* 世界的城隍爺 aroundTheWorld */
+.sec06 {
+  background-image: url(../../src/img/city_god_bk.jpg);
+  background-size: cover;
+  z-index: 99;
+  background-attachment: fixed;
+  filter: drop-shadow(-0.2rem 0.5rem 1rem black);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.worldCityGodSet {
+  display: relative;
+  width: 100%;
+}
+.aroundTheWorldTitleImg {
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+.worldCityGodImg {
+  display: absolute;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 1rem;
+  border-top: 0.5rem solid black;
+}
+
+.cityGod_too_Img {
+  width: 100%;
+}
+/* 也是城隍爺 grid 排列 */
+.aroundTheWorld_parent {
+  /* padding-top: 2rem; */
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.worldCityGodText h2 {
+  padding-top: 1rem;
+}
+.worldCityGodText p {
+  padding-top: 0.5rem;
+}
+
+.aroundTheWorld_div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.aroundTheWorld_div2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.aroundTheWorld_div3 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.aroundTheWorld_div4 {
+  grid-area: 4 / 1 / 5 / 2;
+}
+.aroundTheWorld_div5 {
+  grid-area: 1 / 2 / 5 / 3;
+}
+.aroundTheWorld_div6 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.aroundTheWorld_div7 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.aroundTheWorld_div8 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.aroundTheWorld_div9 {
+  grid-area: 4 / 3 / 5 / 4;
+}
+.aroundTheWorld_div10 {
+  grid-area: 4 / 3 / 5 / 4;
+}
