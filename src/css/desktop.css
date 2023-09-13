@@ -182,8 +182,8 @@ a:visited {
 .youCame_text {
   position: absolute;
   bottom: 5%;
-  right: 50%;
-  transform: translate(50%, 0%);
+  right: 5%;
+  transform: translate(0%, 0%);
   width: 40vw;
   padding: 1rem;
   background-color: rgb(255, 255, 255, 0.8);
