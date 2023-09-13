@@ -8,3 +8,139 @@ p margin-top: 1rem
 font-family: 'Noto Sans TC', sans-serif;
 font-family: 'Noto Serif TC', serif;
 font-family: 'Roboto', sans-serif;
+
+
+  <!-- sec01 -->
+        <div class="promoSec">
+          <div class="promoHead">
+            <div class="promoTitle">神之所以為神，是因為......</div>
+            <div class="promoMore">more</div>
+          </div>
+          <div class="promoBody">
+            <div class="promoSet">
+              <img src="./src/img/bookImg.png" alt="" />
+              <div class="promoText">
+                <p>
+                  關公崇拜溯源：從各行業神祇到移民信仰核心，堂堂武將怎麼變成大眾的精神寄託？
+                </p>
+              </div>
+            </div>
+            <div class="promoSet">
+              <img src="./src/img/bookImg.png" alt="" />
+              <div class="promoText">
+                <p>
+                  關公崇拜溯源：從各行業神祇到移民信仰核心，堂堂武將怎麼變成大眾的精神寄託？
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sec01 -->
+        <div class="promoSec">
+          <div class="promoHead">
+            <div class="promoTitle">神之所以為神，是因為......</div>
+            <div class="promoMore">more</div>
+          </div>
+          <div class="promoBody">
+            <div class="promoSet">
+              <img src="./src/img/bookImg.png" alt="" />
+              <div class="promoText">
+                <p>
+                  關公崇拜溯源：從各行業神祇到移民信仰核心，堂堂武將怎麼變成大眾的精神寄託？
+                </p>
+              </div>
+            </div>
+            <div class="promoSet">
+              <img src="./src/img/bookImg.png" alt="" />
+              <div class="promoText">
+                <p>
+                  關公崇拜溯源：從各行業神祇到移民信仰核心，堂堂武將怎麼變成大眾的精神寄託？
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sec01 -->
+        <div class="promoSec">
+          <div class="promoHead">
+            <div class="promoTitle">神之所以為神，是因為......</div>
+            <div class="promoMore">more</div>
+          </div>
+          <div class="promoBody">
+            <div class="promoSet">
+              <img src="./src/img/bookImg.png" alt="" />
+              <div class="promoText">
+                <p>
+                  關公崇拜溯源：從各行業神祇到移民信仰核心，堂堂武將怎麼變成大眾的精神寄託？
+                </p>
+              </div>
+            </div>
+            <div class="promoSet">
+              <img src="./src/img/bookImg.png" alt="" />
+              <div class="promoText">
+                <p>
+                  關公崇拜溯源：從各行業神祇到移民信仰核心，堂堂武將怎麼變成大眾的精神寄託？
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sec01 -->
+        <div class="promoSec">
+          <div class="promoHead">
+            <div class="promoTitle">神之所以為神，是因為......</div>
+            <div class="promoMore">more</div>
+          </div>
+          <div class="promoBody">
+            <div class="promoSet">
+              <img src="./src/img/bookImg.png" alt="" />
+              <div class="promoText">
+                <p>
+                  關公崇拜溯源：從各行業神祇到移民信仰核心，堂堂武將怎麼變成大眾的精神寄託？
+                </p>
+              </div>
+            </div>
+            <div class="promoSet">
+              <img src="./src/img/bookImg.png" alt="" />
+              <div class="promoText">
+                <p>
+                  關公崇拜溯源：從各行業神祇到移民信仰核心，堂堂武將怎麼變成大眾的精神寄託？
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        .promoGirl {
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  z-index: -1;
+  height: 100vh;
+}
+
+.promoGroup {
+  /* position: absolute; */
+  right: 0;
+  top: 0;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.promoSec {
+  border: solid 5px blue;
+}
+.promoHead {
+  border: solid 5px red;
+  display: flex;
+}
+.promoBody {
+  display: flex;
+}
+
+.promoTitle {
+  z-index: 9;
+  height: 70vh;
+}

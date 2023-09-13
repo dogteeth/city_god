@@ -18,9 +18,43 @@
     />
     <!-- css -->
     <link rel="stylesheet" href="./src/css/desktop.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/main.css" />
+
+    <!-- gsap script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <title>TAAZE讀冊生活｜城隍爺到</title>
   </head>
   <body>
+    <!-- header 開始 -->
+    <div class="logo_banner">
+      <a class="logo_link" href="https://www.taaze.tw/index.html">
+        <img class="logo_img" src="./src/img/logo@2x.png" alt=""
+      /></a>
+      <div class="logo_banner_entry_group">
+        <li class="logo_banner_entry">
+          <a
+            class="logo_banner_entry_link"
+            href="https://www.taaze.tw/static_act/lecture/2015/index.htm"
+            >學堂</a
+          >
+        </li>
+        <li class="logo_banner_entry">
+          <a class="logo_banner_entry_link" href="https://wecollect.fun/login"
+            >冊格子</a
+          >
+        </li>
+        <li class="logo_banner_entry">
+          <a
+            class="logo_banner_entry_link"
+            href="https://www.taaze.tw/gift_index.html?pct=11&cp=1&ps=30&ct=010000000000&cl=1"
+            >二手書送給你</a
+          >
+        </li>
+      </div>
+    </div>
+    <!-- header 結束 -->
     <!-- 主視覺 -->
     <div class="sec01 headerMain">
       <img class="mainLogo" src="./src/img/city_god_MainLogo.png" alt="" />
@@ -33,9 +67,17 @@
 
     <!-- divider 爾來了 -->
     <div class="divider_YouCame">
-      <h2>
-        「爾來了」是全台廟宇中最有名的匾額之一。現存於台灣府城隍廟，昭和年間文物。文字的意思是：你來了啊。城隍爺日審陽，夜審陰，人或靈終有機會可以來到城隍爺面前，對自己的因果做審思。
-      </h2>
+      <div class="youCame_text" id="animate_text">
+        <h2>爾來了</h2>
+        <p>
+          全台廟宇中最有名的匾額之一。現存於<a
+            href="#"
+            target="_blank"
+            ref="noopener"
+            ><em class="linkText">台灣府城隍廟</em></a
+          >，昭和年間文物。爾來了可以譯成「你來了啊」、「沒想到你也來了」，或是「你終究也有這一天」的意思。城隍爺日審陽，夜審陰，人或靈不管什麼理由來到城隍爺面前，都是面對自已因果的時刻。
+        </p>
+      </div>
     </div>
 
     <!-- 城隍爺的工作 -->
@@ -43,7 +85,7 @@
       <img class="tallGuy" src="./src/img/tall.png" alt="" />
       <img class="shortGuy" src="./src/img/short.png" alt="" />
     </div>
-    <!-- 全台最古老的城隍廟 -->
+    <!-- 全台最古老的城隍廟 sec04 -->
     <div class="sec04 theFlyingTiger">
       <div class="theFlyingTigerHeader">
         <div class="leftPanel">
@@ -89,7 +131,7 @@
             >
           </h3>
           <p class="description">
-            明鄭永曆23年建成。此為台灣第一座官派城隍廟，也是官階最高的城隍廟（威靈公）。日治時期都市規劃，廟前廣場改成道路，失去原有的規模。2005年升格為國定古蹟。廟內現存多件珍貴文物，如乾隆時期的香爐、咸豐、光緒時期匾額等。
+            明鄭永曆23年建成。此為台灣第一座官派城隍廟，也是官階最高的城隍廟（威靈公）。日治時期因都市規劃，廟前廣場改成道路，失去原有的規模。2005年升格為國定古蹟。廟內現存多件珍貴文物，如乾隆時期的香爐、咸豐、光緒時期匾額等。
           </p>
           <p class="info_source">
             圖片、資料來源：<a
@@ -121,7 +163,7 @@
             </a>
           </h3>
           <p class="description">
-            為現今的嘉義城隍廟。清康熙54年，由知縣周鍾瑄捐款所建，供俸城隍爺顯佑伯。當時的諸羅縣管轄範圍南至台南，北至基隆宜蘭。廟內的木雕、石雕、彩繪多出於名匠之手。廟門彩繪為潘麗水的作品，於2012年遭人縱火燒毀。
+            為現今的嘉義城隍廟。清康熙54年，由知縣周鍾瑄捐款所建，供俸城隍爺顯佑伯。當時諸羅縣行政範圍南至台南，北至基隆宜蘭。廟內的木雕、石雕、彩繪多出於名匠之手。廟門彩繪為潘麗水的作品，於2012年遭人縱火燒毀。
           </p>
           <p class="info_source">
             圖片、資料來源：<a
@@ -185,7 +227,7 @@
             >
           </h3>
           <p class="description">
-            由知縣秦士望於清雍正十一年（1733年）捐俸興建。原供俸之城隍為顯佑伯（縣級），於2003年擲筊請示後升等為仁愛侯（州級）。
+            清雍正11年，由知縣秦士望捐俸興建。原供俸之城隍為顯佑伯（縣級），於2003年擲筊請示後升等為仁愛侯（州級）。
           </p>
           <p class="info_source">
             圖片：<a
@@ -253,7 +295,7 @@
             >
           </h3>
           <p class="description">
-            又稱鳳邑城隍廟。嘉慶五年（1800年），由知縣吳兆麟於新城鳳儀書院旁立廟，供俸城隍爺顯佑伯。日治時期曾做為總督府使用。
+            又稱鳳邑城隍廟。嘉慶5年，由知縣吳兆麟於新城鳳儀書院旁立廟，供俸城隍爺顯佑伯。日治時期曾做為總督府使用。
           </p>
           <p class="info_source">
             圖片、資料來源：<a
@@ -284,7 +326,7 @@
             >
           </h3>
           <p class="description">
-            為現今宜蘭市城隍廟。因應宜蘭設廳（噶瑪蘭廳）而建成的城隍廟。原廟為稻草與土泥所有做土磚建成。至日治昭和期間，才以紅磚改建。廟內以木雕著名，可以看到陳銀生、陳弄獅、陳合元等名匠的作品。
+            為現今宜蘭市城隍廟。嘉慶12年，因應宜蘭設廳（噶瑪蘭廳）而建成的城隍廟。原廟為稻草與土泥所有做土磚建成。至日治昭和期間，才以紅磚改建。廟內以木雕著名，可以看到陳銀生、陳弄獅、陳合元等名匠的作品。
           </p>
           <p class="info_source">
             圖片、資料來源：<a
@@ -316,7 +358,7 @@
             >
           </h3>
           <p class="description">
-            明鄭永曆23年建成。此為台灣第一座官派城隍廟，也是官階最高的城隍廟（威靈公）。日治時期都市規劃，廟前廣場改成道路，失去原有的規模。2005年升格為國定古蹟。廟內現存多件珍貴文物，如乾隆時期的香爐、咸豐、光緒時期匾額等。
+            為現今的松山昭明廟。光緒7年，由台北府知府陳星聚籌資創建。日治時期因都市計劃，原址遭拆除，於現址重建，並更名為「昭明廟」，直到2002年才恢復原名「台北府城隍廟」，並由當時的台北市長馬英九贈送匾額。
           </p>
           <p class="info_source">
             圖片、資料來源：<a
@@ -347,7 +389,7 @@
             >
           </h3>
           <p class="description">
-            為現今基隆護國城隍廟。由舉人江呈輝、秀才張尚廉發起捐地建廟而建。二次世界大戰期間基隆遭到轟炸，當時信徒背著城隍神像逃難。遭損毀的建物則在戰後重建。
+            為現今基隆護國城隍廟。光緒13年，由舉人江呈輝、秀才張尚廉發起捐地建廟而建。二次世界大戰期間基隆遭到轟炸，當時信徒背著城隍神像逃難。遭損毀的建物則在戰後重建。
           </p>
           <p class="info_source">
             圖片、資料來源：<a
@@ -378,7 +420,7 @@
             >
           </h3>
           <p class="description">
-            為現今台中城隍廟。清光緒年間由知縣黃承乙興建。日治初期因都市規劃拆除，後遷址重建，數度停工，到大正後期才完工。因該地在風水上為龜穴，廟方在庭內養許多烏龜。也成為它的特色之一。
+            為現今台中城隍廟。光緒15年，由知縣黃承乙興建。日治初期因都市規劃拆除，後遷址重建，數度停工，到大正後期才完工。因該地風水為龜穴，廟方於庭內養了許多烏龜。也成為它的特色之一。
           </p>
           <p class="info_source">
             圖片、資料來源：<a
@@ -392,7 +434,13 @@
         </div>
       </div>
     </div>
-    <!-- 世界的城隍爺 -->
+
+    <!-- 城隍爺閱讀筆記 -->
+    <div class="sec05">
+      <img class="cityGodFigure" src="./src/img/city_god.png" alt="" />
+    </div>
+
+    <!-- 世界的城隍爺 sec06-->
     <div class="sec06 aroundTheWorldGods">
       <div class="aroundTheWorld_parent">
         <div class="aroundTheWorld_div5">
@@ -411,9 +459,11 @@
             class="worldCityGodImg"
           />
           <div class="worldCityGodText">
-            <h2>馬爾杜克(中東)</h2>
+            <h2>馬爾杜克｜巴比倫</h2>
             <p>
-              馬爾杜克（Marduk）為巴比倫城的保護神，也是商業、農業的保護神。隨著巴比倫勢力的擴大，衪的信仰也跟著擴大。最後變成了巴比倫王國的主神，眾神之神。<a
+              馬爾杜克（
+              <em>Marduk</em
+              >）為古代巴比倫城保護神，同時也保護商人、農人。隨著巴比倫城勢力的擴大，衪的信仰也擴大。最後變成了巴比倫王國的主神，眾神之神。<a
                 href="https://zh.wikipedia.org/zh-tw/%E9%A9%AC%E5%B0%94%E6%9D%9C%E5%85%8B"
                 target="_blank"
                 rel="noopener"
@@ -431,9 +481,11 @@
             class="worldCityGodImg"
           />
           <div class="worldCityGodText">
-            <h2>卜塔（埃及）</h2>
+            <h2>卜塔｜埃及</h2>
             <p>
-              卜塔（<em>Ptah</em>），古埃及首都曼菲斯城的保護神。衪同時也創意、創造之神。和創造有關的人們，也受衪保護，如工匠、藝術家。
+              卜塔（
+              <em>Ptah</em
+              >），古埃及首都曼菲斯城的保護神，也創意、創造之神。和創造有關的人們，也受衪保護，如工匠、藝術家。
               <a
                 href="https://zh.wikipedia.org/zh-tw/%E5%8D%9C%E5%A1%94"
                 target="_blank"
@@ -452,9 +504,11 @@
             class="worldCityGodImg"
           />
           <div class="worldCityGodText">
-            <h2 class="textZh">雅典娜（希臘）</h2>
+            <h2 class="textZh">雅典娜｜希臘</h2>
             <p class="textZh">
-              希臘的每一個城市都有不同的保護神。雅典城的守護神就是雅典娜(Athena)。雅典娜同時也是力量的代表，會以女戰士的形象出現。協助人民抵抗外來者的入侵。
+              希臘的每一個城市都有不同的保護神。雅典城的守護神就是雅典娜（
+              <em>Athena</em
+              >）。衪同時也是力量的代表，以女戰神的形象出現，用力量與智慧保護城市。
               <a
                 href="https://zh.wikipedia.org/zh-tw/%E9%9B%85%E5%85%B8%E5%A8%9C"
                 target="_blank"
@@ -473,10 +527,11 @@
             class="worldCityGodImg"
           />
           <div class="worldCityGodText">
-            <h2 class="textZh">力高爸爸（海地）</h2>
+            <h2 class="textZh">力高爸爸｜海地</h2>
             <p class="textZh">
-              力高爸爸 （Papa
-              Legba）是巫毒教中，關於家園和道路的守護神。衪負責保護家園，也會替人們移除回家路上的障礙。同時衪熟知宇宙的所有語言，需要與眾神溝通的事也可以找衪。<a
+              在非洲西部與海地的巫毒教，力高爸爸 （
+              <em>Papa Legba</em
+              >）是家園、道路的守護神。同時衪也熟知宇宙的所有語言，需要與眾神溝通的事也可以找衪。<a
                 href="https://zh.wikipedia.org/zh-tw/力高爸"
                 target="_blank"
                 rel="noopener"
@@ -494,9 +549,11 @@
             class="worldCityGodImg"
           />
           <div class="worldCityGodText">
-            <h2 class="textZh">普善（印度）</h2>
+            <h2 class="textZh">普善｜印度</h2>
             <p class="textZh">
-              普善（Pushan）是印度眾神中，負責旅程、道路的神，保護人民遠離盗匪、野獸猛禽的傷害。同時也是靈魂的指引者，導引靈魂到另一個世界。<a
+              印度教裹，普善（
+              <em>Pushan</em
+              >）負責保護道路和旅程。幫助保護人民遠離盗匪、野獸猛禽的傷害。衪同時也是靈魂的指引者，導引靈魂到另一個世界。<a
                 href="https://en.wikipedia.org/wiki/Pushan"
                 target="_blank"
                 rel="noopener"
@@ -514,9 +571,9 @@
             class="worldCityGodImg"
           />
           <div class="worldCityGodText">
-            <h2 class="textZh">哥吉拉（日本）</h2>
+            <h2 class="textZh">哥吉拉｜日本</h2>
             <p class="textZh">
-              哥吉拉是日本電影文化裹最有名的角色之一。從50年代初登場的反派角色，隨時間演進，漸漸轉變成東京、甚至是人類的守護獸，擊退入侵者的好獸。<a
+              哥吉拉是日本電影文化裹最有名的角色之一。從50年代初登場的反派角色，隨時間演進，逐漸轉變成東京、日本、甚至全人類的守護獸。<a
                 href="https://zh.wikipedia.org/zh-tw/哥斯拉"
                 target="_blank"
                 rel="noopener"
@@ -534,9 +591,9 @@
             class="worldCityGodImg"
           />
           <div class="worldCityGodText">
-            <h2 class="textZh">長栍（韓國）</h2>
+            <h2 class="textZh">長栍｜韓國</h2>
             <p class="textZh">
-              長栍為農村裹常見的守護神。以兩根柱子的方式，一男一女，立在村莊的出入口，保護村莊，消災解厄。造型以簡單樸實的方式呈現(Wiki)。<a
+              長栍為韓國農村裹常見的守護神。以兩根柱子的方式，立在村莊的出入口，保護村莊。造型以簡單樸實的方式，一男一女的方式呈現各別的柱子上。<a
                 href="https://zh.wikipedia.org/zh-tw/長栍"
                 target="_blank"
                 rel="noopener"
@@ -554,10 +611,12 @@
             class="worldCityGodImg"
           />
           <div class="worldCityGodText">
-            <h2>雅努斯（羅馬）</h2>
+            <h2>雅努斯｜羅馬</h2>
             <p>
-              雅努斯（Janus）是羅馬的通道之神，城市的門，是羅馬人的保護神。衪也是改變之神，代表時間、空間、季節改變。衪現身的時候，頭會有兩張臉，朝著相對的方向。<a
-                href="#"
+              雅努斯（
+              <em>Janus</em
+              >）是羅馬的通道之神，守護著城市的主要出入口。衪有門的意像，所以當衪現身的時候，會有兩張臉望向對立的兩個方向。<a
+                href="https://zh.wikipedia.org/zh-tw/%E9%9B%85%E5%8A%AA%E6%96%AF"
                 target="_blank"
                 rel="noopener"
               >
@@ -568,5 +627,327 @@
         </div>
       </div>
     </div>
+
+    <!-- 推薦書 -->
+    <div class="sec08">
+      <img class="promoTitle" src="./src/img/promoTitle.png" alt="" />
+      <div class="promoGroup">
+        <!-- sec01 -->
+        <div class="promoSec">
+          <div class="promoSecHeader">
+            <div class="promoSecTitle">
+              <h2>神之所以為神，是因為......</h2>
+            </div>
+            <div class="promoSecMore">
+              <a
+                class="linkText"
+                href="https://activity.taaze.tw/toActivityUnitItem.html?unitNO=1000433393&masNo=1000681516&current_page=1&tmpName=imgUntil#bodys
+              "
+                target="_blank"
+                rel="noopener"
+                ><p>&thinsp;MORE</p></a
+              >
+            </div>
+          </div>
+          <div class="bookGroup">
+            <div class="bookSet">
+              <a
+                href="https://www.taaze.tw/products/11101016422.html"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="bookImg"
+                  src="./src/img/bookImg01.png"
+                  alt="bookImg"
+              /></a>
+              <div class="bookText">
+                <p>
+                  關公崇拜溯源：從各行業神祇到移民信仰核心，堂堂武將怎麼變成大眾的精神寄託？
+                </p>
+              </div>
+            </div>
+            <div class="bookSet">
+              <a
+                href="https://www.taaze.tw/products/11100987897.html"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="bookImg"
+                  src="./src/img/bookImg02.png"
+                  alt="bookImg"
+              /></a>
+              <div class="bookText">
+                <p>神明怎麼那麼可愛！：寶島諸神降落，有看有保庇！</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sec02 -->
+        <div class="promoSec">
+          <div class="promoSecHeader">
+            <div class="promoSecTitle">
+              <h2>求神、問事、遶境、廟會......，廟宇裡的大小事</h2>
+            </div>
+            <div class="promoSecMore">
+              <a
+                class="linkText"
+                href="https://activity.taaze.tw/toActivityUnitItem.html?unitNO=1000433394&masNo=1000681516&current_page=1&tmpName=imgUntil#bodys
+              "
+                target="_blank"
+                rel="noopener"
+                ><p>&thinsp;MORE</p></a
+              >
+            </div>
+          </div>
+          <div class="bookGroup">
+            <div class="bookSet">
+              <a
+                href="https://www.taaze.tw/products/11100966426.html"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="bookImg"
+                  src="./src/img/bookImg03.png"
+                  alt="bookImg"
+              /></a>
+              <div class="bookText">
+                <p>
+                  跟著廟口說書人看廟趣：聽！郭喜斌戲說彩繪╳剪黏╳交趾╳木雕╳石雕經典裝飾故事
+                </p>
+              </div>
+            </div>
+            <div class="bookSet">
+              <a
+                href="https://www.taaze.tw/products/11101012905.html"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="bookImg"
+                  src="./src/img/bookImg04.png"
+                  alt="bookImg"
+              /></a>
+              <div class="bookText">
+                <p>關聖帝君萬應靈籤：雷雨師一百籤古籍新勘籤詩卡</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sec03 -->
+        <div class="promoSec">
+          <div class="promoSecHeader">
+            <div class="promoSecTitle">
+              <h2>神鬼信仰百百種，你相信什麼？</h2>
+            </div>
+            <div class="promoSecMore">
+              <a
+                class="linkText"
+                href="https://activity.taaze.tw/toActivityUnitItem.html?unitNO=1000433395&masNo=1000681516&current_page=1&tmpName=imgUntil#bodys
+              "
+                target="_blank"
+                rel="noopener"
+                ><p>&thinsp;MORE</p></a
+              >
+            </div>
+          </div>
+          <div class="bookGroup">
+            <div class="bookSet">
+              <a
+                href="https://www.taaze.tw/products/11100974642.html"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="bookImg"
+                  src="./src/img/bookImg05.png"
+                  alt="bookImg"
+              /></a>
+              <div class="bookText">
+                <p>都市傳說事典：臺灣百怪談（精裝）</p>
+              </div>
+            </div>
+            <div class="bookSet">
+              <a
+                href="https://www.taaze.tw/products/11100942007.html"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="bookImg"
+                  src="./src/img/bookImg06.png"
+                  alt="bookImg"
+              /></a>
+              <div class="bookText">
+                <p>臺灣都市傳說百科</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sec04 -->
+        <div class="promoSec">
+          <div class="promoSecHeader">
+            <div class="promoSecTitle">
+              <h2>寺廟巡禮千萬步，平安順遂第一步</h2>
+            </div>
+            <div class="promoSecMore">
+              <a
+                class="linkText"
+                href="https://activity.taaze.tw/toActivityUnitItem.html?unitNO=1000433396&masNo=1000681516&current_page=1&tmpName=imgUntil#bodys
+                "
+                target="_blank"
+                rel="noopener"
+                ><p>&thinsp;MORE</p></a
+              >
+            </div>
+          </div>
+          <div class="bookGroup">
+            <div class="bookSet">
+              <a
+                href="https://www.taaze.tw/products/11100972823.html"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="bookImg"
+                  src="./src/img/bookImg07.png"
+                  alt="bookImg"
+              /></a>
+              <div class="bookText">
+                <p>從弘法寺到天后宮：走訪日治時期臺北朝聖之路</p>
+              </div>
+            </div>
+            <div class="bookSet">
+              <a
+                href="https://www.taaze.tw/products/11101006896.html"
+                target="_blank"
+                rel="noopener"
+                ><img
+                  class="bookImg"
+                  src="./src/img/bookImg08.png"
+                  alt="bookImg"
+              /></a>
+              <div class="bookText">
+                <p>至德馨香-感于神明‧黍稷非馨‧明德惟馨</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer 開始-->
+    <footer>
+      <div
+        align="center"
+        style="color: #000; font-size: 14px; margin: 0 auto; width: 100%"
+      >
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td align="center" valign="middle" bgcolor="#FFFFFF">
+                <p
+                  style="
+                    display: block;
+                    line-height: 25px;
+                    font-size: 12px;
+                    color: #000000;
+                  "
+                >
+                  &nbsp;
+                </p>
+                <p
+                  style="
+                    text-align: center;
+                    display: block;
+                    line-height: 25px;
+                    font-size: 12px;
+                    color: #000000;
+                  "
+                >
+                  <a
+                    style="color: #000000"
+                    href="http://activity.taaze.tw/static_act/about/index.htm"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >關於我們</a
+                  >
+                  |
+                  <a
+                    style="color: #000000"
+                    href="http://activity.taaze.tw/static_act/privacynotice/index.htm"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >隱私權政策</a
+                  >
+                  |
+                  <a
+                    style="color: #000000"
+                    href="http://activity.taaze.tw/static_act/partner/index.htm"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >合作計劃</a
+                  >
+                  |
+                  <a
+                    style="color: #000000"
+                    href="http://activity.taaze.tw/static_act/jobs/index.htm"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >徵人</a
+                  >
+                  |
+                  <a
+                    style="color: #000000"
+                    href="https://www.taaze.tw/member_serviceCenter.html?act=mail"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >客服信箱</a
+                  >
+                  |
+                  <a
+                    style="color: #000000"
+                    href="http://www.facebook.com/TAAZE"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >Facebook</a
+                  >
+                  |
+                  <a
+                    style="color: #000000"
+                    href="https://www.instagram.com/taaze.tw/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >instagram </a
+                  ><br />
+                  學思行數位行銷股份有限公司
+                  &nbsp;10491&nbsp;台北市中山區長安東路一段23號三樓之2
+                </p>
+                <p
+                  style="
+                    display: block;
+                    line-height: 25px;
+                    font-size: 12px;
+                    color: #000000;
+                  "
+                >
+                  &nbsp;
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </footer>
+    <!-- footer 結束 -->
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from("#animate_text", {
+        scrollTrigger: {
+          trigger: ".divider_YouCame",
+          start: "top -5%",
+          end: "bottom 50%",
+          toggleActions: "play reverse restart reset",
+          // markers: { fontSize: "2rem" },
+        },
+        opacity: 0,
+        duration: 1,
+      });
+    </script>
   </body>
 </html>

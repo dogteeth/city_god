@@ -39,6 +39,7 @@ a:visited {
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: -1;
   background-attachment: fixed;
 }
 .mainLogo {
@@ -178,31 +179,51 @@ a:visited {
   position: relative;
 }
 
-.divider_YouCame h2 {
-  color: white;
+.youCame_text {
   position: absolute;
   bottom: 5%;
-  right: 5%;
-  transform: translate(0%, 0%);
+  right: 50%;
+  transform: translate(50%, 0%);
   width: 40vw;
   padding: 1rem;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(255, 255, 255, 0.8);
   border-radius: 1rem;
+  box-shadow: 0rem 1rem 1rem black;
+}
+
+/* 城隍爺閱讀筆記 */
+.sec05 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../src/img/city_god_bk.jpg);
+  background-position: center;
+  filter: drop-shadow(-0.2rem 0.5rem 1rem black);
+  position: relative;
+}
+
+.cityGodFigure {
+  position: absolute;
+  height: 90%;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  /* width: 100%; */
 }
 
 /* 世界的城隍爺 aroundTheWorld */
 .sec06 {
-  background-image: url(../../src/img/city_god_bk.jpg);
+  background-image: url(../../src/img/city_god_twoColor_bk_2.jpg);
   background-size: cover;
-  z-index: 99;
+  background-position: center;
   background-attachment: fixed;
-  filter: drop-shadow(-0.2rem 0.5rem 1rem black);
+
+  z-index: 99;
+
   padding-top: 3rem;
   padding-bottom: 2rem;
 }
 
 .worldCityGodSet {
-  display: relative;
   width: 100%;
 }
 .aroundTheWorldTitleImg {
@@ -211,7 +232,6 @@ a:visited {
   overflow: hidden;
 }
 .worldCityGodImg {
-  display: absolute;
   width: 100%;
   object-fit: contain;
   border-radius: 1rem;
@@ -268,4 +288,81 @@ a:visited {
 }
 .aroundTheWorld_div10 {
   grid-area: 4 / 3 / 5 / 4;
+}
+
+/* sec07 論文推薦 */
+
+/* .sec07 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../src/img/city_god_twoColor_bk_2.jpg);
+  background-position: center;
+  background-attachment: fixed;
+} */
+
+.sec08 {
+  background-image: url(../../src/img/city_god_promo_bk_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-attachment: fixed;
+  z-index: 9;
+  filter: drop-shadow(-0.2rem 0.5rem 1rem black);
+  position: relative;
+}
+.promoTitle {
+  padding-top: 5rem;
+  position: sticky;
+  height: 70vh;
+  top: 4rem;
+  left: 8%;
+}
+.promoGroup {
+  width: 50%;
+  margin: auto 2rem auto auto;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.promoSec {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(128, 128, 128, 0.9);
+  border-radius: 1rem;
+}
+.promoSecHeader {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 1rem;
+}
+.bookGroup {
+  display: flex;
+  gap: 1rem;
+}
+.bookSet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.bookImg {
+  display: block;
+  margin: auto;
+  width: 80%;
+  object-fit: cover;
+}
+
+.bookImg:hover {
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgb(0, 0, 0, 0.7));
+  object-fit: contain;
+}
+
+.bookText {
+  padding-top: 1rem;
+  width: 90%;
 }
