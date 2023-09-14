@@ -308,27 +308,32 @@ a:visited {
 /* 城隍爺閱讀筆記 */
 .sec05 {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background-image: url(../../src/img/city_god_bk.jpg);
   background-position: center;
   box-shadow: -0.2rem 0.5rem 1rem black;
   position: relative;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  padding: 5rem 2rem 2rem 2rem;
+  place-content: center;
 }
 
 .cityGodFigure {
-  position: absolute;
-  height: 90%;
-  top: 50%;
-  left: 5%;
-  transform: translate(0%, -50%);
+  padding: 1rem;
+  width: 90%;
+  align-self: flex-end;
 }
 .readingNotesText {
-  border: solid 5px red;
-  position: absolute;
-  width: 50%;
-  top: 50%;
-  right: 5%;
-  transform: translate(0%, -50%);
+  padding: 3rem 3rem 1rem 0;
+  width: 100%;
+}
+
+.cityGod_Book {
+  width: 15vw;
+  float: right;
+  padding: 1rem 1rem 1rem 2rem;
+  filter: drop-shadow(0rem 0.5rem 0.5rem black);
 }
 
 /* 世界的城隍爺 aroundTheWorld */
