@@ -102,6 +102,41 @@ a:visited {
 }
 
 .whoIsCityGod_Content_right {
+  padding: 2rem;
+  background-color: rgb(128, 128, 128, 0.5);
+}
+
+.videoContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  /* padding: 2rem 2rem 2rem 2rem; */
+}
+/* videoContainer set up */
+.videoContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player {
+  aspect-ratio: 16/9;
+  width: 100%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.videoText {
+  width: 100%;
+  text-align: justify;
+  color: black;
+  padding: 0rem 1rem 1rem 1rem;
+}
+.videoText p {
+  margin-top: 0rem;
+  padding-top: 0rem;
+  font-size: 1rem;
 }
 
 /* 爾來了 */
