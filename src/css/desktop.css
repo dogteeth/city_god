@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overscroll-behavior: none;
 }
 
 ::-webkit-scrollbar {
@@ -56,13 +57,14 @@ a:visited {
 .sec01 {
   width: 100%;
   height: 100vh;
-  background-image: url(../../src/img/city_god_readingGirls.jpg);
+  background-image: url(../../src/img/two_girls.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
   background-attachment: fixed;
+  overscroll-behavior: none;
 }
 
 .mainLogo {
@@ -83,7 +85,8 @@ a:visited {
   background-size: cover;
   position: relative;
   z-index: 9;
-  box-shadow: -0.2rem 0.5rem 1rem black;
+  /* border: solid 5px red; */
+  filter: drop-shadow(-0.2rem 0.5rem 1rem black);
 }
 .whoIsCityGodText {
   position: absolute;
@@ -136,14 +139,9 @@ a:visited {
   gap: 1rem;
   padding: 1rem 0rem 0.5rem 0rem;
 }
-.nameTag {
-  /* width: 120px;
-  height: 600px; */
-  background-color: rgb(255, 0, 0, 0.5);
-  perspective: 1000px;
-}
 
 .nameTag {
+  perspective: 1000px;
   background-color: transparent;
   width: 200px;
   height: 300px;
@@ -330,7 +328,8 @@ a:visited {
 }
 
 .cityGod_too_Img {
-  /* width: 100%; */
+  padding: 1rem;
+  width: 100%;
 }
 /* 也是城隍爺 grid 排列 */
 .aroundTheWorld_parent {
@@ -380,16 +379,6 @@ a:visited {
 .aroundTheWorld_div10 {
   grid-area: 4 / 3 / 5 / 4;
 }
-
-/* sec07 論文推薦 */
-
-/* .sec07 {
-  width: 100%;
-  height: 100vh;
-  background-image: url(../../src/img/city_god_twoColor_bk_2.jpg);
-  background-position: center;
-  background-attachment: fixed;
-} */
 
 .sec08 {
   background-image: url(../../src/img/city_god_promo_bk_2.jpg);
