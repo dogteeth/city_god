@@ -1,5 +1,6 @@
-/* header & footer */
-
+body {
+  background-image: url(../../src/img/city_god_bk.jpg);
+}
 .logo_banner {
   width: 100%;
   height: 70px;
