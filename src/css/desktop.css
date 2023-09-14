@@ -5,7 +5,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 1rem;
+  width: 0;
 }
 
 ::-webkit-scrollbar-track {
@@ -192,9 +192,9 @@ a:visited {
 /* 全台最古老的城隍廟 */
 .sec04 {
   width: 100%;
-  background-image: url(../../src/img/city_god_twoColor_bk_2.jpg);
+  /* background-image: url(../../src/img/city_god_twoColor_bk_2.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -263,12 +263,10 @@ a:visited {
 .divider_YouCame {
   width: 100%;
   height: 100vh;
-  background-image: url(../../src/img/text_youCame.png),
-    url(../../src/img/city_god_twoColor_bk_2.jpg);
-  background-size: 70vw, cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-image: url(../../src/img/text_youCame.png);
+  background-size: 70vw;
   background-repeat: no-repeat;
+  background-position: center;
   position: relative;
 }
 

@@ -1,5 +1,7 @@
 body {
-  background-image: url(../../src/img/city_god_bk.jpg);
+  background-image: url(../../src/img/city_god_twoColor_bk_2.jpg);
+  background-position: center;
+  background-attachment: fixed;
 }
 .logo_banner {
   width: 100%;
