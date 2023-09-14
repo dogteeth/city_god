@@ -5,22 +5,6 @@
   overscroll-behavior: none;
 }
 
-::-webkit-scrollbar {
-  width: 0;
-}
-
-::-webkit-scrollbar-track {
-  background: rgb(255, 0, 0, 0.2);
-  border-radius: 100vw;
-  margin-block: 0.1em;
-}
-
-::-webkit-scrollbar-thumb {
-  background: red;
-  border-radius: 100vw;
-  border: 0.1em solid red;
-}
-
 body {
   font-family: "Noto Serif TC", serif;
 }
@@ -30,8 +14,14 @@ h2 {
 }
 /* 文字前後對齊 */
 p {
-  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-size: 1.3rem;
   text-align: justify;
+}
+
+.highlight {
+  font-style: normal;
+  font-weight: bold;
 }
 /* 連結文字不斷行 */
 .linkText {
@@ -57,7 +47,7 @@ a:visited {
 .sec01 {
   width: 100%;
   height: 100vh;
-  background-image: url(../../src/img/two_girls.png);
+  background-image: url(../../src/img/city_god_readingGirls.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,9 +68,10 @@ a:visited {
   filter: drop-shadow(0.2rem 0.5rem 0.5rem rgb(0, 0, 0));
 }
 
+/* 誰是城隍爺 */
 .sec02 {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../../src/img/city_god_bk.jpg);
   background-size: cover;
   position: relative;
@@ -89,6 +80,7 @@ a:visited {
   filter: drop-shadow(-0.2rem 0.5rem 1rem black);
 }
 .whoIsCityGodText {
+  z-index: -1;
   position: absolute;
   height: 120vh;
   bottom: 1%;
@@ -96,55 +88,100 @@ a:visited {
   transform: translate(-50%, 0);
   filter: drop-shadow(0.2rem 0.5rem 0.5rem rgb(0, 0, 0));
 }
-.sec03 {
+
+.whoIsCityGod_Container {
+  z-index: 99;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20%;
+  padding: 2rem;
+}
+.whoIsCityGod_Content_left {
+  padding: 2rem;
+  background-color: rgb(128, 128, 128, 0.5);
+}
+
+.whoIsCityGod_Content_right {
+}
+
+/* 爾來了 */
+.divider_YouCame {
   width: 100%;
   height: 100vh;
+  background-image: url(../../src/img/text_youCame.png);
+  background-size: 70vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.youCame_text {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 40vw;
+  padding: 1rem;
+  background-color: rgb(255, 255, 255, 0.6);
+  box-shadow: 0rem 0.5rem 0.5rem black;
+}
+
+/* 城隍爺的團隊 */
+
+.sec03 {
+  width: 100%;
   background-image: url(../../src/img/city_god_bk.jpg);
   background-size: cover;
   background-position: center;
-  position: relative;
   z-index: 99;
   box-shadow: -0.2rem 0.5rem 1rem black;
+  display: grid;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  place-content: center;
+  position: relative;
+}
+
+.teamNameTagsText {
+  padding: 2rem 0rem;
+}
+
+.tallGuy {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .shortGuy {
-  width: 20vw;
+  height: 80vh;
   position: absolute;
   right: 0;
-  bottom: 1%;
-}
-.tallGuy {
-  width: 20vw;
-  position: absolute;
-  left: 0;
-  bottom: 1%;
+  bottom: 0;
+  z-index: -1;
 }
 
 .teamNameTagsContainer {
+  position: block;
+  margin: auto;
+  width: 60%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin: auto;
-  width: 65%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  align-items: center;
 }
+
 .teamNameTags {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  overflow-x: scroll;
-  overflow-y: hidden;
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
-  padding: 1rem 0rem 0.5rem 0rem;
 }
 
 .nameTag {
   perspective: 1000px;
   background-color: transparent;
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 350px;
   perspective: 1000px;
 }
 
@@ -171,28 +208,28 @@ a:visited {
 }
 
 .nameTag_front {
-  background-color: rgb(255, 0, 0, 0.5);
+  background-color: rgb(255, 0, 0, 0.6);
+  display: grid;
+  place-content: center;
 }
 
 .nameTag_back {
   background-color: grey;
   transform: rotateY(180deg);
-}
-.nameTag_back {
   padding: 1rem;
   writing-mode: vertical-lr;
   text-orientation: mixed;
-
   display: grid;
   place-content: center;
+}
+
+.nameTag_back p {
+  font-size: 1.1rem;
 }
 
 /* 全台最古老的城隍廟 */
 .sec04 {
   width: 100%;
-  /* background-image: url(../../src/img/city_god_twoColor_bk_2.jpg);
-  background-size: cover;
-  background-position: center; */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -206,6 +243,7 @@ a:visited {
   gap: 1%;
   align-items: center;
   padding-bottom: 2rem;
+  position: relative;
 }
 .theFlyingTigerHeader img {
   width: 100%;
@@ -216,6 +254,16 @@ a:visited {
 .theOldestTempleText {
   max-height: 90vh;
   object-fit: contain;
+}
+
+.topList_text {
+  position: absolute;
+  width: 40vw;
+  bottom: 5%;
+  right: 2%;
+  padding: 1rem;
+  background-color: rgb(255, 255, 255, 0.7);
+  box-shadow: 0rem 0.5rem 0.5rem black;
 }
 /* top 10 清單 */
 .theFlyingTigerBody {
@@ -257,29 +305,6 @@ a:visited {
   padding-top: 0.5rem;
 }
 
-/* 爾來了 */
-.divider_YouCame {
-  width: 100%;
-  height: 100vh;
-  background-image: url(../../src/img/text_youCame.png);
-  background-size: 70vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-}
-
-.youCame_text {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  transform: translate(0%, 0%);
-  width: 40vw;
-  padding: 1rem;
-  background-color: rgb(255, 255, 255, 0.8);
-  border-radius: 1rem;
-  box-shadow: 0rem 1rem 1rem black;
-}
-
 /* 城隍爺閱讀筆記 */
 .sec05 {
   width: 100%;
@@ -294,9 +319,16 @@ a:visited {
   position: absolute;
   height: 90%;
   top: 50%;
-  left: 0%;
+  left: 5%;
   transform: translate(0%, -50%);
-  /* width: 100%; */
+}
+.readingNotesText {
+  border: solid 5px red;
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  right: 5%;
+  transform: translate(0%, -50%);
 }
 
 /* 世界的城隍爺 aroundTheWorld */
@@ -305,11 +337,20 @@ a:visited {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
   z-index: 99;
-
   padding-top: 3rem;
   padding-bottom: 2rem;
+  position: relative;
+}
+
+.world_cityGod_text {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 20vw;
+  padding: 1rem;
+  background-color: rgb(255, 255, 255, 0.7);
+  box-shadow: 0rem 0.5rem 0.5rem black;
 }
 
 .worldCityGodSet {
@@ -380,6 +421,7 @@ a:visited {
   grid-area: 4 / 3 / 5 / 4;
 }
 
+/* 商品區 */
 .sec08 {
   background-image: url(../../src/img/city_god_promo_bk_2.jpg);
   background-size: cover;
