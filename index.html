@@ -3,6 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- meta data general-->
+    <meta name="keywords" content="TAAZE,網路書店,賣書,二手書" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta property="fb:app_id" content="116787935057056" />
+
+    <!-- meta data -->
+    <meta
+      name="description"
+      content="日審陽，夜審陰的城隍爺，幾乎包辦了信眾生活的所有面向，不管是求健康、求子嗣、求發財、求功名，甚至是不公不義，冤情需要伸張，不管是人還是鬼，城隍都可以幫上忙..."
+    />
+    <meta
+      property="og:description"
+      content="日審陽，夜審陰的城隍爺，幾乎包辦了信眾生活的所有面向，不管是求健康、求子嗣、求發財、求功名，甚至是不公不義，冤情需要伸張，不管是人還是鬼，城隍都可以幫上忙..."
+    />
+    <meta
+      property="og:title"
+      content="TAAZE讀冊生活｜城隍爺到*萬事求城隍、什麼都保佑"
+    />
+    <meta property="og:image" content="#" />
+
+    <!-- google 追踪碼 -->
+    <script type="text/javascript">
+      <!--
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-21769407-2"]);
+      _gaq.push(["_setDomainName", "taaze.tw"]);
+      _gaq.push(["_trackPageview"]);
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+      //-->
+    </script>
+
     <!-- font awesome  -->
     <link
       rel="stylesheet"
@@ -17,14 +60,41 @@
       rel="stylesheet"
     />
     <!-- css -->
-    <link rel="stylesheet" href="./src/css/desktop.css" />
-    <link rel="stylesheet" href="./src/css/main.css" />
+
+    <!-- CSS for RWD -->
+
+    <!-- basic for all css -->
+    <link rel="stylesheet" href="../src/css/main.css" />
+
+    <!-- mobile css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (max-width:700px)"
+      href="./src/css/mobile.css"
+    />
+
+    <!-- screen size改變時的微調 css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and  (min-width: 701px) and (max-width:1100px)"
+      href="./src/css/inBetween.css"
+    />
+
+    <!-- desktop css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and  (min-width: 1101px)"
+      href="./src/css/desktop.css"
+    />
 
     <!-- gsap script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <title>TAAZE讀冊生活｜城隍爺到</title>
+    <title>TAAZE讀冊生活｜城隍爺到*萬事求城隍、什麼都保佑</title>
   </head>
   <body>
     <!-- header 開始 -->
@@ -375,10 +445,8 @@
       </div>
       <img class="tallGuy" src="./src/img/tall.png" alt="" />
       <img class="shortGuy" src="./src/img/short.png" alt="" />
-
-      <div class="leftImg"></div>
-      <div class="rightImg"></div>
     </div>
+
     <!-- 全台最古老的城隍廟 sec04 -->
     <div class="sec04 theFlyingTiger">
       <div class="theFlyingTigerHeader">
@@ -738,6 +806,7 @@
     <!-- 城隍爺閱讀筆記 -->
     <div class="sec05 readingNotes">
       <img class="cityGodFigure" src="./src/img/city_god.png" alt="" />
+
       <div class="readingNotesText">
         <a
           href="https://www.taaze.tw/usedList.html?oid=11100034847"
@@ -1300,40 +1369,54 @@
     <script>
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.from("#animate_text", {
-        scrollTrigger: {
-          trigger: ".divider_YouCame",
-          start: "top -5%",
-          end: "bottom 50%",
-          toggleActions: "play reverse restart reset",
-          // markers: { fontSize: "2rem" },
-        },
-        opacity: 0,
-        duration: 1,
-      });
+      let mm = gsap.matchMedia();
+      //
+      mm.add("(min-width: 701px)", () => {
+        // this setup code only runs when viewport is at least 800px wide
 
-      gsap.from("#animate_text_2", {
-        scrollTrigger: {
-          trigger: ".theFlyingTigerHeader",
-          start: "top -5%",
-          end: "bottom 50%",
-          toggleActions: "play reverse restart reset",
-          // markers: { fontSize: "2rem" },
-        },
-        opacity: 0,
-        duration: 1,
-      });
+        gsap.from("#animate_text", {
+          scrollTrigger: {
+            trigger: ".divider_YouCame",
+            start: "top -5%",
+            end: "bottom 50%",
+            toggleActions: "play reverse restart reset",
+            // markers: { fontSize: "2rem" },
+          },
+          opacity: 0,
+          duration: 1,
+        });
 
-      gsap.from("#animate_text_3", {
-        scrollTrigger: {
-          trigger: ".sec06",
-          start: "top 50%",
-          end: "top 5%",
-          toggleActions: "play reverse restart reset",
-        },
-        opacity: 0,
-        duration: 1,
+        gsap.from("#animate_text_2", {
+          scrollTrigger: {
+            trigger: ".theFlyingTigerHeader",
+            start: "top -5%",
+            end: "bottom 50%",
+            toggleActions: "play reverse restart reset",
+            // markers: { fontSize: "2rem" },
+          },
+          opacity: 0,
+          duration: 1,
+        });
+
+        gsap.from("#animate_text_3", {
+          scrollTrigger: {
+            trigger: ".sec06",
+            start: "top 50%",
+            end: "top 5%",
+            toggleActions: "play reverse restart reset",
+          },
+          opacity: 0,
+          duration: 1,
+        });
       });
     </script>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MLGZHLM"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
   </body>
 </html>

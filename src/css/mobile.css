@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+/* Header Main Banner */
+.sec01 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../src/img/left_Reading_Girl.png),
+    url(../../src/img/city_god_twoColor_bk.jpg);
+  background-size: contain, cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.mainLogo {
+  width: 80vw;
+  /* max-width: 600px;
+  min-width: 300px; */
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  filter: drop-shadow(0.2rem 0.5rem 0.5rem rgb(0, 0, 0));
+}
+
+/* 誰是城隍爺 */
+.sec02 {
+  width: 100%;
+  /* min-height: 100vh; */
+  background-image: url(../../src/img/city_god_bk.jpg);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  z-index: 9;
+  filter: drop-shadow(-0.2rem 0.5rem 1rem black);
+}
+
+.whoIsCityGodText {
+  padding: 1rem;
+  height: 130vh;
+  object-fit: contain;
+  order: 1;
+  height: 120vh;
+  top: -10%;
+  filter: drop-shadow(-0.2rem 0.2rem 0.5rem black);
+}
+
+.whoIsCityGod_Container {
+  width: 100%;
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 1rem;
+  gap: 1rem;
+}
+
+/*不需要標題（有重複感） */
+.whoIsCityGod_Content_left h1 {
+  display: none;
+}
+
+.videoContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  /* padding: 2rem 2rem 2rem 2rem; */
+}
+
+/* videoContainer set up */
+.videoContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player {
+  aspect-ratio: 16/9;
+  width: 100%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.videoText {
+  width: 100%;
+  text-align: justify;
+  color: black;
+  padding: 0rem 1rem 1rem 1rem;
+}
+.videoText p {
+  margin-top: 0rem;
+  padding-top: 0rem;
+  font-size: 1rem;
+}
+
+.divider_YouCame {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../src/img/text_youCame.png);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: -1;
+}
+
+.youCame_text {
+  display: none;
+}
+
+/* 城隍的團隊 */
+.sec03 {
+  /* width: 100%; */
+  background-image: url(../../src/img/city_god_bk.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 99;
+  display: grid;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  place-content: center;
+  position: relative;
+  filter: drop-shadow(-0.2rem 0.5rem 1rem black);
+}
+
+.tallGuy,
+.shortGuy {
+  display: none;
+}
+.teamNameTagsText {
+  padding: 1rem 0rem;
+}
+
+.teamNameTags {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  place-content: center;
+
+  /* margin-left: 0.5rem; */
+}
+
+.nameTag {
+  perspective: 1000px;
+  background-color: transparent;
+  width: 100%;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.nameTag_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.nameTag:hover .nameTag_inner {
+  transform: rotateY(180deg);
+}
+
+.nameTag_front,
+.nameTag_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.nameTag_front {
+  background-color: rgb(255, 0, 0, 0.6);
+  display: grid;
+  place-content: center;
+}
+
+.nameTag_back {
+  background-color: grey;
+  transform: rotateY(180deg);
+  padding: 1rem 1rem 2rem 1rem;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  display: grid;
+  place-content: center;
+}
+
+.nameTag_back p {
+  font-size: 1.1rem;
+}
+
+.sec04 {
+  width: 100%;
+  background-image: url(../../src/img/city_god_twoColor_bk.jpg);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  background-attachment: fixed;
+}
+
+.theFlyingTigerHeader {
+  display: grid;
+  place-content: center;
+  padding-bottom: 1rem;
+}
+
+.tiger_headRight,
+.tiger_headLeft {
+  display: none;
+}
+.theOldestTempleText {
+  max-height: 100vh;
+  object-fit: contain;
+}
+.topList_text {
+  display: none;
+}
+
+/* top 10 清單 */
+.theFlyingTigerBody {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* column-gap: 1rem; */
+  row-gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+/* 各廟資料 */
+.topListSet {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: rgb(128, 128, 128, 0.7);
+}
+.topListSet img {
+  width: 100%;
+  filter: grayscale(0.8);
+}
+
+.title {
+  padding-top: 1rem;
+}
+
+.description {
+  padding-top: 0.5rem;
+}
+
+.info_source {
+  padding-top: 0.5rem;
+}
+
+.sec05 {
+  width: 100%;
+  background-image: url(../../src/img/city_god_bk.jpg);
+  background-position: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  overflow: hidden;
+  z-index: 99;
+  filter: drop-shadow(-0.2rem 0.1rem 0.1rem rgb(0, 0, 0, 0.7));
+}
+
+.cityGodFigure {
+  width: 100%;
+}
+
+.cityGod_Book {
+  display: none;
+}
+
+.readingNotesText {
+  padding: 1rem;
+}
+
+.sec06 {
+  background-image: url(../../src/img/city_god_twoColor_bk.jpg);
+  background-size: cover;
+  background-position: left;
+  /* background-position: center; */
+  background-attachment: fixed;
+  z-index: 1;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.world_cityGod_text {
+  display: none;
+}
+
+.cityGod_too_Img {
+}
+
+.worldCityGodSet {
+  padding: 1rem;
+  width: 100%;
+  background-color: rgb(128, 128, 128, 0.7);
+}
+
+.worldCityGodImg {
+  width: 100%;
+  object-fit: contain;
+}
+
+.aroundTheWorld_parent {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 商品區 */
+.sec08 {
+  background-image: url(../../src/img/city_god_promo_bk_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-attachment: fixed;
+  z-index: 9;
+  box-shadow: -0.2rem 0.5rem 1rem black;
+  position: relative;
+}
+
+.promoTitle {
+  padding: 2rem;
+  height: 80vh;
+}
+
+.promoGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.promoSec {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(128, 128, 128, 0.9);
+}
+
+.promoSecHeader {
+  /* display: flex; */
+  /* flex-direction: column;
+  align-items: baseline; */
+  /* padding-bottom: 1rem; */
+  align-items: flex-end;
+}
+
+.promoSecMore p {
+  text-align: right;
+  margin-top: 0rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.bookGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bookSet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.bookSet img {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
