@@ -184,16 +184,16 @@ a:visited {
 .tallGuy {
   height: 100vh;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 1%;
+  bottom: 1%;
   z-index: -1;
 }
 
 .shortGuy {
   height: 80vh;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 1%;
+  bottom: 1%;
   z-index: -1;
 }
 
@@ -368,7 +368,11 @@ a:visited {
   width: 15vw;
   float: right;
   padding: 1rem 1rem 1rem 2rem;
-  filter: drop-shadow(0rem 0.5rem 0.5rem black);
+  filter: drop-shadow(0rem 0.2rem 0.2rem black);
+}
+
+.cityGod_Book:hover {
+  filter: drop-shadow(0rem 1rem 1rem black);
 }
 
 /* 世界的城隍爺 aroundTheWorld */
